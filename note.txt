@@ -1,0 +1,9 @@
+Build and upload testpypi
+python3 -m build
+python3 -m twine upload --repository testpypi dist/*
+pip3 install -i https://test.pypi.org/simple/ akithon==0.1
+
+Build and upload pypi
+python3 -m build
+python3 -m twine upload --repository pypi dist/*
+pip3 install akithon==0.1
